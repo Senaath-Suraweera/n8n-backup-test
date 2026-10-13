@@ -1,0 +1,50 @@
+{
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [0, 0],
+      "id": "9b926204-60c1-4bab-9d4e-07f080a1950e",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "toRecipients": "senaathsuraweera@outlook.com",
+        "subject": "test",
+        "bodyContent": "test",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.microsoftOutlook",
+      "typeVersion": 2,
+      "position": [224, 0],
+      "id": "64d1aa89-b6ee-448a-b526-bf51fca17750",
+      "name": "Send a message",
+      "webhookId": "c83cd52b-dc8b-4b14-971d-38856f98513a",
+      "credentials": {
+        "microsoftOutlookOAuth2Api": {
+          "id": "nxzmD7j7RbMvHXYO",
+          "name": "SenaathOutlook"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "14e0f0c34bb652842677b063ed47467f310e446b654533af024e049b281fa8d7"
+  }
+}
